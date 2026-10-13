@@ -1,0 +1,268 @@
+1. First Java program
+java
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        System.out.println("Welcome to Java Programming!");
+    }
+}
+Output:
+
+text
+Hello, World!
+Welcome to Java Programming!
+2. Java variables and data types
+java
+
+public class Main {
+    public static void main(String[] args) {
+        int age = 20;
+        double salary = 25000.50;
+        char grade = 'A';
+        boolean isStudent = true;
+        String name = "Rahul";
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+        System.out.println("Grade: " + grade);
+        System.out.println("Student: " + isStudent);
+    }
+}
+3. Take user input
+java
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+
+        System.out.println("Hello " + name);
+        System.out.println("Your age is " + age);
+
+        sc.close();
+    }
+}
+4. If-else condition
+java
+
+public class Main {
+    public static void main(String[] args) {
+        int marks = 85;
+
+        if (marks >= 90) {
+            System.out.println("Grade A");
+        } else if (marks >= 75) {
+            System.out.println("Grade B");
+        } else if (marks >= 50) {
+            System.out.println("Grade C");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}
+5. Loops
+java
+
+public class Main {
+    public static void main(String[] args) {
+
+        // For loop
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+
+        // While loop
+        int j = 1;
+        while (j <= 5) {
+            System.out.println("Count: " + j);
+            j++;
+        }
+    }
+}
+6. Arrays
+java
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+7. Methods
+java
+
+public class Main {
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Sum: " + add(10, 20));
+        System.out.println("Product: " + multiply(5, 4));
+    }
+}
+8. Object-oriented programming (OOP)
+java
+
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Rahul", 20);
+        Student s2 = new Student("Priya", 21);
+
+        s1.display();
+        s2.display();
+    }
+}
+Important OOP concepts:
+
+Class and object
+
+Inheritance
+
+Polymorphism
+
+Encapsulation
+
+Abstraction
+
+9. Inheritance
+java
+
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+10. Exception handling
+java
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int a = 10;
+            int b = 0;
+            System.out.println(a / b);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        } finally {
+            System.out.println("Program finished");
+        }
+    }
+}
+11. ArrayList
+java
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Rahul");
+        names.add("Priya");
+        names.add("Amit");
+
+        System.out.println(names);
+
+        names.remove("Amit");
+
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+}
+12. Java mini project — Calculator
+java
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter operator (+, -, *, /): ");
+        char op = sc.next().charAt(0);
+
+        System.out.print("Enter second number: ");
+        double b = sc.nextDouble();
+
+        switch (op) {
+            case '+':
+                System.out.println("Result: " + (a + b));
+                break;
+            case '-':
+                System.out.println("Result: " + (a - b));
+                break;
+            case '*':
+                System.out.println("Result: " + (a * b));
+                break;
+            case '/':
+                if (b != 0) {
+                    System.out.println("Result: " + (a / b));
+                } else {
+                    System.out.println("Cannot divide by zero");
+                }
+                break;
+            default:
+                System.out.println("Invalid operator");
+        }
+
+        sc.close();
+    }
+}

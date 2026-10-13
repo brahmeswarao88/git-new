@@ -1,0 +1,184 @@
+1. First Python program
+python
+
+print("Hello, World!")
+print("Welcome to Python Programming!")
+Output:
+
+text
+Hello, World!
+Welcome to Python Programming!
+2. Variables and data types
+python
+
+name = "Rahul"
+age = 20
+height = 5.8
+is_student = True
+
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Student:", is_student)
+3. Take user input
+python
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+print("Hello,", name)
+print("Your age is", age)
+4. If-else statements
+python
+
+marks = int(input("Enter your marks: "))
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+elif marks >= 50:
+    print("Grade C")
+else:
+    print("Fail")
+5. Loops
+python
+
+# For loop
+for i in range(1, 6):
+    print(i)
+
+# While loop
+j = 1
+while j <= 5:
+    print("Count:", j)
+    j += 1
+6. Lists
+python
+
+fruits = ["Apple", "Banana", "Mango"]
+
+fruits.append("Orange")
+print(fruits)
+
+fruits.remove("Banana")
+print(fruits)
+
+for fruit in fruits:
+    print(fruit)
+7. Functions
+python
+
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+
+print("Sum:", add(10, 20))
+print("Product:", multiply(5, 4))
+Output:
+
+text
+Sum: 30
+Product: 20
+8. Dictionaries
+python
+
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "marks": 85
+}
+
+print(student["name"])
+print(student["age"])
+print(student["marks"])
+
+student["city"] = "Hyderabad"
+print(student)
+9. Classes and objects (OOP)
+python
+
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+s1 = Student("Rahul", 20)
+s2 = Student("Priya", 21)
+
+s1.display()
+s2.display()
+10. Exception handling
+python
+
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print("Result:", a / b)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+except ValueError:
+    print("Please enter valid numbers")
+
+finally:
+    print("Program finished")
+11. File handling
+python
+
+# Write to a file
+with open("sample.txt", "w") as file:
+    file.write("Hello Python!\n")
+    file.write("Learning file handling.")
+
+# Read from the file
+with open("sample.txt", "r") as file:
+    content = file.read()
+    print(content)
+12. Python mini project — Calculator
+python
+
+def calculator():
+    a = float(input("Enter first number: "))
+    operator = input("Enter operator (+, -, *, /): ")
+    b = float(input("Enter second number: "))
+
+    if operator == "+":
+        print("Result:", a + b)
+    elif operator == "-":
+        print("Result:", a - b)
+    elif operator == "*":
+        print("Result:", a * b)
+    elif operator == "/":
+        if b != 0:
+            print("Result:", a / b)
+        else:
+            print("Cannot divide by zero")
+    else:
+        print("Invalid operator")
+
+calculator()
+13. Useful Python programs to practice
+Even or odd number
+
+Check whether a number is divisible by 2.
+
+Factorial program
+
+Calculate the factorial of a number.
+
+Number guessing game
+
+Create an interactive game using random numbers.
+
+Python with SQL
+
+Connect Python to a database and store records.
+
